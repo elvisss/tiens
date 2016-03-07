@@ -1,0 +1,16 @@
+{
+  "name": "tiens",
+  "version": "1.0.0",
+  "description": "Website to Tiens",
+  "main": "gulpfile.js",
+  "author": "Elvis Saavedra",
+  "license": "N/A",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.2",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-sass": "^2.2.0"
+  }
+}
