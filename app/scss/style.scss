@@ -1,6 +1,7 @@
 $backgound-color: #f6f5f5;
 $white: #fff;
 $black: #000;
+$black-medium: #131313;
 $black-light: #3e3e3e;
 $green: #15a03d;
 $green-light: #7cce94;
@@ -93,6 +94,51 @@ ul, li {
 body {
   background-color: $backgound-color;
   font-family: $font-family;
+}
+
+.main-content {
+  min-height: 400px;
+  .wrapper-content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.new-main {
+  color: $black-medium;
+  font-size: 24px;
+  position: relative;
+  .new-cover-image {
+    background-size: cover;
+    height: 390px;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0;
+  }
+  .wrap-new {
+    padding: 0 32px;
+  }
+  p {
+
+  }
+  ul {
+    &.new-list {
+      padding-left: 30px;
+      li {
+        list-style: initial;
+        color: $green;
+        * {
+          color: $black-medium;
+        }
+        h3 {
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
 
 .navbar-top {
@@ -683,6 +729,11 @@ body {
       .navbar-collapse {
         margin-left: 200px;
       }
+    }
+  }
+  .main-content {
+    .wrapper-content {
+      padding: 90px 70px;
     }
   }
 }
