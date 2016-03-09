@@ -48,7 +48,8 @@ gulp.task('styles', function () {
       'bower_components/bootstrap/dist/css/bootstrap.css',
       'bower_components/fontawesome/css/font-awesome.css',
       'bower_components/owl.carousel/dist/assets/owl.carousel.css',
-      'bower_components/owl.carousel/dist/assets/owl.theme.default.css'
+      'bower_components/owl.carousel/dist/assets/owl.theme.default.css',
+      'bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css'
     ])
   .pipe(gulp.dest('dist/css'))
 });
