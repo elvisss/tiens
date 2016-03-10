@@ -78,6 +78,41 @@ ul, li {
   margin: 0;
 }
 
+.col-xs-1-5, .col-sm-1-5, .col-md-1-5, .col-lg-1-5 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-1-5 {
+  width: 20%;
+  float: left;
+}
+.col-xs-offset-0-5 {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .col-sm-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    width: 20%;
+    float: left;
+  }
+  .col-sm-offset-2-5 {
+    margin-left: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
+
 // Main space
 
 .m-l-5 {
@@ -581,7 +616,6 @@ body {
 .wrap-box-hover {
   @include box-shadow(0 0 3px $gray-ligth);
   background-color: $white;
-  margin: 15px 0;
   padding: 4px;
   .bg-img-hover {
     background-size: cover;
@@ -619,8 +653,13 @@ body {
   }
 }
 
+.overflow-text {
+  text-overflow: ellipsis;
+}
+
 .gallery-events {
   .wrap-box-hover {
+    margin: 15px 0;
     .body-box-img {
       @include background-opacity($green, 0.7);
       a {
@@ -629,10 +668,20 @@ body {
       }
     }
   }
+  &.gallery-190 {
+    .wrap-box-hover {
+      padding: 2px;
+      background-color: $orange;
+      .bg-img-hover {
+        height: 190px;
+      }
+    }
+  }
 }
 
 .gallery-videos {
   .wrap-box-hover {
+    margin: 15px 0;
     .body-box-img {
       @include background-opacity($orange, 0.7);
       a {
@@ -837,6 +886,29 @@ body {
       font-size: 12px;
       margin: 0;
     }
+  }
+}
+
+.box-gallery {
+  margin-top: 45px;
+  &:first-child {
+    margin-top: 0;
+  }
+  h2 {
+    border-bottom: 1px solid $green;
+    color: $orange;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 0 15px 20px;
+  }
+  .cont-box-hover {
+    p {
+      margin: 0;
+    }
+  }
+  .cont-buttom {
+    margin-top: 35px;
   }
 }
 
