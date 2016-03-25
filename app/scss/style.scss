@@ -183,6 +183,9 @@ body {
     &.bg-transparent {
       background-color: $transparent;
     }
+    &.small-space {
+      padding: 25px 0;
+    }
   }
 }
 
@@ -762,18 +765,77 @@ body {
 }
 
 .sidebar {
-  // max-width: 270px;
-  .top-sidebar {
+  .box-sidebar {
+    margin-top: 10px;
+    &:first-child {
+      margin-top: 0;
+    }
+    .top-sidebar {
 
+    }
+    .body-sidebar {
+      padding: 15px 0;
+      li {
+        padding-bottom: 10px;
+        a {
+          color: $black-light;
+          display: block;
+          font-size: 30px;
+          &.bg {
+            background-repeat: no-repeat;
+            background-position: right top;
+            line-height: 30px;
+          }
+          &.bg-png {
+            background-image: url('../images/bg-png.png');
+          }
+        }
+      }
+      &.md-sidebar {
+        li {
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+      &.no-space {
+        li {
+          padding-bottom: 0;
+        }
+      }
+    }
   }
-  .body-sidebar {
-    padding: 15px 0;
-    li {
-      padding-bottom: 10px;
-      a {
-        color: $black-light;
-        display: block;
-        font-size: 30px;
+}
+
+.sidebar-inverse {
+  .box-sidebar {
+    .top-sidebar {
+      background-color: $green;
+      font-weight: bold;
+      padding: 20px 30px;
+      h3 {
+        color: $white;
+        font-size: 18px;
+      }
+    }
+    .body-sidebar {
+      @include gradient($white, $gray-ligth);
+      padding: 40px 25px;
+      h4 {
+        color: $green;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      ul {
+        padding-left: 10px;
+        li {
+          a {
+            color: $gris-dark;
+            display: block;
+            font-size: 16px;
+          }
+        }
       }
     }
   }
@@ -808,6 +870,24 @@ body {
     }
     .view-more {
       margin-top: 35px;
+    }
+  }
+}
+
+.wrap-medium {
+  .cover-medium {
+    background-size: cover;
+    height: 270px;
+  }
+  .content-medium {
+    h2 {
+      margin-top: 22px;
+    }
+    p {
+      color: $black-light;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 15px 0;
     }
   }
 }
@@ -880,6 +960,12 @@ body {
     font-weight: bold;
     padding-bottom: 15px;
     padding-left: 5px;
+  }
+  &.md-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 0;
+    padding-bottom: 10px;
   }
 }
 
@@ -1063,6 +1149,13 @@ body {
   .new-main {
     padding-left: 70px;
     padding-right: 70px;
+  }
+  .sidebar-inverse {
+    .box-sidebar {
+      .body-sidebar {
+        min-height: 600px;
+      }
+    }
   }
 }
 
