@@ -24,16 +24,30 @@
       <div class="container-fluid">
         <div class="pull-right" role="search">
           <ul class="nav navbar-nav">
-            <li>
-              <div class="navbar-text">
-                Bienvenido, <span>Winston Lewis</span>
-              </div>
+            <li class="dropdown">
+              <a id="mainMenu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Bienvenido, <span>Winston Lewis</span> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="mainMenu">
+                <li>
+                  <a href="#">Estado de cuenta</a>
+                </li>
+                <li>
+                  <a href="#">Mis pedidos</a>
+                </li>
+                <li>
+                  <a href="#">Mis datos personales</a>
+                </li>
+                <li>
+                  <a href="#">Mis direcciones</a>
+                </li>
+              </ul>
             </li>
             <li>
               <div class="navbar-text m-l-5">|</div>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="notifications">
                 <img src="images/bulb.png" alt="" class="notif" /> Notificaciones
               </a>
             </li>
@@ -85,9 +99,9 @@
 
   <section class="main-content">
     <div class="container">
-      <div class="wrapper-content">
+      <div class="wrapper-content bg-transparent">
         <div class="box-gallery">
-          <h2>Últimas Galerías</h2>
+          <h2 class="title-orange-line">Últimas Galerías</h2>
           <div class="gallery-events gallery-190">
             <div class="row">
               <div class="col-xs-12 col-sm-1-5">
@@ -179,7 +193,7 @@
           </div>
         </div>
         <div class="box-gallery main-gallery">
-          <h2>Galerías</h2>
+          <h2 class="title-orange-line">Galerías</h2>
           <div class="gallery-events gallery-190">
             <div class="row">
               <div class="group-gallery">
@@ -297,7 +311,7 @@
           </div>
         </div>
         <div class="box-gallery">
-          <h2>Otros</h2>
+          <h2 class="title-orange-line">Otros</h2>
           <div class="gallery-events gallery-190">
             <div class="row">
               <div class="col-xs-12 col-sm-1-5">

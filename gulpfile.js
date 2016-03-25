@@ -38,7 +38,8 @@ gulp.task('scripts', function () {
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/html5shiv/dist/html5shiv.js',
       'bower_components/Respond/dest/respond.src.js',
-      'bower_components/owl.carousel/dist/owl.carousel.js'
+      'bower_components/owl.carousel/dist/owl.carousel.js',
+      'bower_components/toastr/toastr.js'
     ])
   .pipe(gulp.dest('dist/js'))
 });
@@ -49,7 +50,8 @@ gulp.task('styles', function () {
       'bower_components/fontawesome/css/font-awesome.css',
       'bower_components/owl.carousel/dist/assets/owl.carousel.css',
       'bower_components/owl.carousel/dist/assets/owl.theme.default.css',
-      'bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css'
+      'bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css',
+      'bower_components/toastr/toastr.css'
     ])
   .pipe(gulp.dest('dist/css'))
 });

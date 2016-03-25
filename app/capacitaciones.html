@@ -24,16 +24,30 @@
       <div class="container-fluid">
         <div class="pull-right" role="search">
           <ul class="nav navbar-nav">
-            <li>
-              <div class="navbar-text">
-                Bienvenido, <span>Winston Lewis</span>
-              </div>
+            <li class="dropdown">
+              <a id="mainMenu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Bienvenido, <span>Winston Lewis</span> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="mainMenu">
+                <li>
+                  <a href="#">Estado de cuenta</a>
+                </li>
+                <li>
+                  <a href="#">Mis pedidos</a>
+                </li>
+                <li>
+                  <a href="#">Mis datos personales</a>
+                </li>
+                <li>
+                  <a href="#">Mis direcciones</a>
+                </li>
+              </ul>
             </li>
             <li>
               <div class="navbar-text m-l-5">|</div>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="notifications">
                 <img src="images/bulb.png" alt="" class="notif" /> Notificaciones
               </a>
             </li>

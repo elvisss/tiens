@@ -12,7 +12,8 @@
     "bootstrap": "~3.3.6",
     "fontawesome": "~4.5.0",
     "owl.carousel": "~2.0.0-beta.3",
-    "bootstrap-vertical-tabs": "~1.2.1"
+    "bootstrap-vertical-tabs": "~1.2.1",
+    "toastr": "~2.1.2"
   },
   "devDependencies": {
     "html5shiv": "~3.7.3",
