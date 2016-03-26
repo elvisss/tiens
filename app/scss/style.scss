@@ -238,7 +238,7 @@ body {
     padding: 0 32px;
   }
   p {
-
+    margin-bottom: 20px;
   }
   ul {
     &.new-list {
@@ -677,6 +677,7 @@ body {
     color: $black;
     font-size: 36px;
     margin: 0 0 50px;
+    text-transform: uppercase;
   }
   .view-more-gallery {
     .btn {
@@ -1034,8 +1035,11 @@ body {
     background-size: cover;
     height: 480px;
   }
+  .wrap-faq {
+    padding: 0 25px;
+  }
   .cont-faq {
-    padding: 45px 25px 40px;
+    padding: 40px 0 35px;
     h2 {
       color: $green;
       font-size: 36px;
