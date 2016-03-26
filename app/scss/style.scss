@@ -12,7 +12,7 @@ $green-white: #d5e9d8;
 $green-lion: #39b54a;
 $gray: #4b4b4b;
 $gray-ligth: #bfbfbf;
-$gray-lighter: #e4e4e4;
+$gray-ligther: #e4e4e4;
 $gray-medium: #818285;
 $white-dark: #f4f4f4;
 $black-ligth: #343434;
@@ -22,11 +22,14 @@ $gris-light: #7a7a7a;
 $gris-lighter: #606060;
 $gris-darker: #313131;
 $gris-medium: #8b8b8b;
+$white-dark: #f9f9f9;
+$white-darkest: #f5f5f5;
 $orange: #f0bc00;
 $orange-ligth: #ffa606;
 $orange-lighter: #f3be00;
 $orange-lion: #fcb040;
 $brown-light: #8e8071;
+$light-blue: #4ab1fe;
 $transparent: rgba(0,0,0,0);
 $font-family: calibri, Arial, sans-serif;
 
@@ -473,7 +476,7 @@ body {
   }
   .foot-schedule {
     .box-bot {
-      background-color: $gray-lighter;
+      background-color: $gray-ligther;
       border-left: 1px solid $white;
       color: $black-ligth;
       font-size: 17px;
@@ -827,6 +830,84 @@ body {
         padding-bottom: 0;
       }
     }
+  }
+}
+
+.notifications {
+  padding: 0 25px;
+  .top-notif {
+    margin-bottom: 25px;
+    h3 {
+      color: $black;
+      font-size: 20px;
+      line-height: 30px;
+      img {
+        margin-right: 10px;
+        vertical-align: top;
+      }
+    }
+  }
+  table {
+    thead {
+      tr {
+        background-color: $white-darkest;
+        th {
+          color: $green;
+          font-size: 16px;
+          font-weight: normal;
+          &.date {
+            width: 15%;
+          }
+          &.status {
+            width: 10%;
+          }
+          &.message {
+            width: 75%;
+          }
+        }
+      }
+    }
+    > tbody {
+      > tr {
+        td {
+          &:nth-child(1) {
+            p {
+              color: $black-medium;
+              font-size: 10px;
+              margin: 0 0 5px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          &:nth-child(2) {
+            .label {
+              border-radius: 0;
+              font-size: 100%;
+            }
+          }
+          &:nth-child(3) {
+            p {
+              margin: 0;
+            }
+          }
+        }
+        &:nth-of-type(2n) {
+          background-color: $white-dark;
+        }
+        > td {
+          padding-top: 15px;
+          padding-bottom: 15px;
+          vertical-align: middle;
+          a {
+            color: $light-blue;
+          }
+        }
+      }
+    }
+  }
+  .pagination-notif {
+    margin: 30px 0;
   }
 }
 
