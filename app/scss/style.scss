@@ -212,6 +212,9 @@ body {
     &.small-space {
       padding: 25px 0;
     }
+    &.no-space {
+      padding: 0;
+    }
   }
 }
 
@@ -1021,6 +1024,85 @@ body {
       a {
         color: $black-light;
         font-size: 14px;
+      }
+    }
+  }
+}
+
+.faq {
+  .cover-faq {
+    background-size: cover;
+    height: 480px;
+  }
+  .cont-faq {
+    padding: 45px 25px 40px;
+    h2 {
+      color: $green;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: $black-light;
+      font-size: 22px;
+    }
+  }
+  .faqs {
+    h3 {
+      padding: 10px 50px;
+      background-color: $green;
+      color: $white;
+      font-size: 17px;
+      display: inline-block;
+    }
+    .panel-group {
+      margin-top: 10px;
+    }
+    .panel {
+      @include box-shadow(none);
+      background-color: $transparent;
+      border: medium none;
+      padding-left: 10px;
+    }
+    .panel-default > .panel-heading {
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-image: url('../images/bg-point.png');
+      background-color: $transparent;
+    }
+  }
+}
+
+.comunicate {
+  height: 175px;
+  margin: 120px 0 50px;
+  overflow: hidden;
+  .bg-comunicate {
+    background-color: $white;
+  }
+  .cover-comunicate {
+    background-position: left top;
+    background-size: cover;
+    height: 175px;
+  }
+  .wrap-comunicate {
+    padding: 35px 60px 30px;
+    h5 {
+      color: $gris-dark;
+      font-size: 18px;
+    }
+    h3 {
+      color: $green-light;
+      font-size: 30px;
+    }
+    h2 {
+      color: $orange;
+      font-size: 36px;
+      font-style: italic;
+      font-weight: bold;
+      margin-top: 15px;
+      text-align: center;
+      a {
+        color: $orange;
       }
     }
   }
