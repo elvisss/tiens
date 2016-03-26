@@ -168,9 +168,27 @@ h1, h2, h3, h4, h5 {
   margin: 10px 0;
 }
 
+.m-20 {
+  margin: 20px 0;
+}
+
+.p-r-none {
+  padding-right: 0;
+}
+
 .responsive-img {
   max-width: 100%;
   width: 100%;
+}
+
+.line-orange {
+  border-top: 2px solid $orange;
+}
+
+.copy {
+  color: $black-medium;
+  font-weight: bold;
+  padding-left: 20px;
 }
 
 // Styles
@@ -769,17 +787,17 @@ body {
   }
 }
 
-.sidebar {
-  .box-sidebar {
-    margin-top: 10px;
-    &:first-child {
-      margin-top: 0;
-    }
-    .top-sidebar {
+.box-sidebar {
+  margin-top: 50px;
+  &:first-child {
+    margin-top: 0;
+  }
+  .top-sidebar {
 
-    }
-    .body-sidebar {
-      padding: 15px 0;
+  }
+  .body-sidebar {
+    padding: 15px 0;
+    .links-resources {
       li {
         padding-bottom: 10px;
         a {
@@ -796,17 +814,43 @@ body {
           }
         }
       }
-      &.md-sidebar {
-        li {
-          a {
-            font-size: 18px;
-          }
+    }
+    &.md-sidebar {
+      li {
+        a {
+          font-size: 18px;
         }
       }
-      &.no-space {
-        li {
-          padding-bottom: 0;
-        }
+    }
+    &.no-space {
+      li {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.social {
+  li {
+    display: inline-block;
+    margin-left: 5px;
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      display: block;
+      width: 35px;
+      height: 35px;
+      background-color: $green;
+      border-radius: 50%;
+      color: $white;
+      font-size: 18px;
+      line-height: 35px;
+      text-align: center;
+      opacity: 0.75;
+      margin: 5px 0;
+      &:hover {
+        opacity: 1;
       }
     }
   }
@@ -879,6 +923,51 @@ body {
   }
 }
 
+.boxes-more-views {
+  .box-more-view {
+    border-top: 2px solid $orange;
+    padding: 20px 0;
+    &:first-child {
+      border-top: medium none;
+    }
+    .link-more-view {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+    .wrap-more-view {
+      a {
+        color: $black-light;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.data-more {
+  color: $gray-medium;
+  font-size: 12px;
+  > span {
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.list-links {
+  a {
+    color: $black;
+    display: block;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  .badge {
+    float: right;
+  }
+}
+
 .wrap-medium {
   .cover-medium {
     background-size: cover;
@@ -945,7 +1034,7 @@ body {
 }
 
 .title-orange-line {
-  border-bottom: 1px solid $green;
+  border-bottom: 2px solid $green;
   color: $orange;
   font-size: 22px;
   line-height: 22px;
@@ -954,7 +1043,7 @@ body {
 }
 
 .title-green-line {
-  border-bottom: 1px solid $orange;
+  border-bottom: 2px solid $orange;
   color: $green;
   font-size: 22px;
   line-height: 22px;
@@ -1181,6 +1270,78 @@ body {
   }
   .main-img-gallery {
     padding: 25px 0;
+  }
+}
+
+.tiens-carousel {
+  margin-bottom: 100px;
+  .carousel-control {
+    &.left, &.right {
+      background-image: none;
+    }
+  }
+  .carousel-indicators {
+    bottom: -80px;
+    li {
+      background-color: $green;
+      border-color: $green;
+      &.active {
+        background-color: $orange;
+        border-color: $orange;
+      }
+    }
+  }
+  .title-caption {
+    margin-top: 20px;
+    h2 {
+      color: $green;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+}
+
+.box-section {
+  margin-bottom: 40px;
+  .cont-box-section {
+    padding: 10px 0;
+    .wrap-box-section {
+      padding: 10px 0;
+      .desc-box-section {
+        margin-bottom: 2px;
+        p {
+          color: $black-medium;
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+      h5 {
+        color: $black;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      a {
+        display: block;
+        margin-bottom: 10px;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          opacity: 0.5;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 40px auto;
+          background-image: url('../images/play-video.png');
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
