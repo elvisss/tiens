@@ -16,8 +16,8 @@ gulp.task('html', function(){
 });
 
 gulp.task('sass', function(){
-  return gulp.src('app/scss/style.scss')
-    .pipe(sass()) // Using gulp-sass
+  return gulp.src(['app/scss/style.scss', 'app/scss/8_pasos.scss'])
+    .pipe(sass())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({
       stream: true
@@ -39,7 +39,10 @@ gulp.task('scripts', function () {
       'bower_components/html5shiv/dist/html5shiv.js',
       'bower_components/Respond/dest/respond.src.js',
       'bower_components/owl.carousel/dist/owl.carousel.js',
-      'bower_components/toastr/toastr.js'
+      'bower_components/toastr/toastr.js',
+      'bower_components/jquery-easing-original/jquery.easing.js',
+      'bower_components/FitText.js/jquery.fittext.js',
+      'bower_components/WOW/dist/wow.js'
     ])
   .pipe(gulp.dest('dist/js'))
 });
@@ -51,7 +54,8 @@ gulp.task('styles', function () {
       'bower_components/owl.carousel/dist/assets/owl.carousel.css',
       'bower_components/owl.carousel/dist/assets/owl.theme.default.css',
       'bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css',
-      'bower_components/toastr/toastr.css'
+      'bower_components/toastr/toastr.css',
+      'bower_components/animate.css/animate.css'
     ])
   .pipe(gulp.dest('dist/css'))
 });

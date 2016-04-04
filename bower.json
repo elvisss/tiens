@@ -13,7 +13,11 @@
     "fontawesome": "~4.5.0",
     "owl.carousel": "~2.0.0-beta.3",
     "bootstrap-vertical-tabs": "~1.2.1",
-    "toastr": "~2.1.2"
+    "toastr": "~2.1.2",
+    "animate.css": "~3.5.1",
+    "jquery-easing-original": "~1.3.2",
+    "FitText.js": "~1.2.0",
+    "WOW": "~1.1.2"
   },
   "devDependencies": {
     "html5shiv": "~3.7.3",

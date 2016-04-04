@@ -1,0 +1,86 @@
+.navbar {
+  border-radius: 0;
+}
+
+.carousel-caption {
+  left: 11%;
+  padding-bottom: 155px;
+  right: 50%;
+  text-align: left;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+.pagination {
+  > li {
+    > a, > span {
+      background-color: $green;
+      border: 1px solid $green;
+      color: $white;
+      margin: 0 2.5px;
+      &:hover, &:focus {
+        background-color: $orange;
+        border: 1px solid $orange;
+        color: $white;
+      }
+    }
+    &:first-child, &:last-child {
+      > a, > span {
+        border-radius: 0;
+      }
+    }
+  }
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $orange;
+      border-color: $orange;
+    }
+  }
+}
+
+.col-xs-1-5, .col-sm-1-5, .col-md-1-5, .col-lg-1-5 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-1-5 {
+  width: 20%;
+  float: left;
+}
+.col-xs-offset-0-5 {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .col-sm-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    width: 20%;
+    float: left;
+  }
+  .col-sm-offset-2-5 {
+    margin-left: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
