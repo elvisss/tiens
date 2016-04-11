@@ -40,10 +40,26 @@
 }
 
 @mixin background-cover() {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin transform-origin($transform-origin...) {
+  -webkit-transform-origin: $transform-origin;
+  -moz-transform-origin: $transform-origin;
+  -ms-transform-origin: $transform-origin;
+  -o-transform-origin: $transform-origin;
+  transform-origin: $transform-origin;
 }
 
 @mixin button-variant($color, $background, $border) {
@@ -89,8 +105,4 @@
 
 @mixin sans-serif-font() {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-}
-
-@mixin serif-font() {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }

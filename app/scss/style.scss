@@ -2,6 +2,15 @@
 @import 'mixins';
 @import 'bootstrap_custom';
 
+// Font Impact
+
+@font-face {
+  font-family: 'Impact';
+
+  src: url('../fonts/impact.eot');
+  src: url('../fonts/impact.eot?#iefix') format('embedded-opentype'), url('../fonts/impact.woff2') format('woff2'), url('../fonts/impact.woff') format('woff'), url('../fonts/impact.ttf') format('truetype'), url('../fonts/impact.svg#glyphicons_halflingsregular') format('svg');
+}
+
 // Main space
 
 .m-l-5 {

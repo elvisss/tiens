@@ -42,7 +42,8 @@ gulp.task('scripts', function () {
       'bower_components/toastr/toastr.js',
       'bower_components/jquery-easing-original/jquery.easing.js',
       'bower_components/FitText.js/jquery.fittext.js',
-      'bower_components/WOW/dist/wow.js'
+      'bower_components/WOW/dist/wow.js',
+      'bower_components/magnific-popup/dist/jquery.magnific-popup.js'
     ])
   .pipe(gulp.dest('dist/js'))
 });
@@ -55,7 +56,8 @@ gulp.task('styles', function () {
       'bower_components/owl.carousel/dist/assets/owl.theme.default.css',
       'bower_components/bootstrap-vertical-tabs/bootstrap.vertical-tabs.css',
       'bower_components/toastr/toastr.css',
-      'bower_components/animate.css/animate.css'
+      'bower_components/animate.css/animate.css',
+      'bower_components/magnific-popup/dist/magnific-popup.css'
     ])
   .pipe(gulp.dest('dist/css'))
 });
@@ -72,6 +74,7 @@ gulp.task('fonts', function () {
     return gulp.src([
       'bower_components/fontawesome/fonts/*.{eot,svg,ttf,woff,woff2}',
       'bower_components/bootstrap/fonts/*.{eot,svg,ttf,woff,woff2}',
+      'app/fonts/*.{eot,svg,ttf,woff,woff2}'
     ])
     .pipe(gulp.dest('dist/fonts/'));
 });
