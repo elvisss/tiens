@@ -567,8 +567,12 @@ section {
             letter-spacing: -1px;
             font-weight: 100;
             font-size: 15px;
+            outline: medium none;
             &:hover {
-              background-color: transparentize(#25aae1, 0.5)
+              background-color: transparentize(#25aae1, 0.5);
+            }
+            &:focus {
+              background-color: transparentize(#25aae1, 0.5);
             }
           }
         }
@@ -819,6 +823,7 @@ aside {
 
 .logo {
   position: absolute;
+  top: 0;
   z-index: 9999;
   .wrap-logo {
     display: block;
