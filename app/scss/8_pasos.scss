@@ -68,8 +68,14 @@ p {
 section {
   @include background-cover();
   background-position: center;
-  padding: 100px 15px;
+  // padding: 100px 15px;
   position: relative;
+  min-height: auto;
+  .section-content {
+    position: relative;
+    padding: 100px 15px;
+    width: 100%;
+  }
   &.step {
     h1, h2 {
       text-shadow: 2px 2px 4px $black;
@@ -88,6 +94,7 @@ section {
         margin-top: 70px;
         ul {
           margin-bottom: 60px;
+          padding-left: 40px;
           li {
             font-size: 18px;
             color: #0b0b0b;
@@ -128,9 +135,8 @@ section {
       }
       h2 {
         color: $white;
-        font-size: 30px;
         line-height: 40px;
-        padding: 120px 0 40px;
+        padding: 20px 0 40px;
         text-transform: uppercase;
         font-family: Arial;
       }
@@ -152,8 +158,8 @@ section {
             color: $white;
             display: inline-block;
             background-color: transparentize(#2f546e, 0.5);
-            margin-bottom: 80px;
-            padding: 20px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
             font-size: 20px;
             line-height: 20px;
             border-radius: 5px;
@@ -163,7 +169,7 @@ section {
             li {
               color: $white;
               font-size: 18px;
-              height: 40px;
+              min-height: 40px;
               margin-bottom: 10px;
               text-transform: uppercase;
               line-height: 40px;
@@ -194,29 +200,34 @@ section {
           }
         }
         .circles {
-          margin-top: 75px;
+          margin-top: 20px;
           .circle {
             background-color: #90c541;
-            width: 140px;
-            height: 140px;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 15px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             text-align: center;
-            margin: 10px auto;
-            span {
-              color: $white;
-              display: block;
-              font-size: 18px;
-              padding: 61px 0;
-              text-transform: uppercase;
+            margin: 5px auto;
+            line-height: 120px;
+            display: block;
+            outline: medium none;
+            &:hover, &:focus {
+              background-color: #1095da;
+              text-decoration: none;
             }
-            &:hover {
+          }
+          .active {
+            .circle {
               background-color: #1095da;
             }
           }
         }
       }
       .accordion-step-2 {
-        margin-top: 90px;
+        margin-top: 40px;
         .panel {
           background-color: transparent;
           border: 0 solid;
@@ -284,7 +295,6 @@ section {
       }
       h2 {
         color: $white;
-        font-size: 30px;
         line-height: 40px;
         padding: 110px 0 50px;
         text-transform: uppercase;
@@ -324,11 +334,14 @@ section {
           text-transform: uppercase;
         }
         ul {
+          padding-left: 20px;
           li {
             color: #90c541;
             font-size: 16px;
             margin-bottom: 15px;
-            list-style: inside;
+            list-style-image: none;
+            list-style-position: initial;
+            list-style-type: disc;
             text-transform: uppercase;
             span {
               color: $white;
@@ -341,11 +354,13 @@ section {
             background-color: #90c541;
             border-radius: 10px;
             color: $white;
-            font-size: 25px;
-            padding: 20px 35px;
+            font-size: 20px;
+            padding: 15px 30px;
             font-weight: normal;
+            white-space: normal;
           }
           img {
+            display: none;
             top: -40px;
             left: -180px;
             position: absolute;
@@ -366,7 +381,6 @@ section {
       }
       h2 {
         color: $white;
-        font-size: 30px;
         line-height: 40px;
         padding: 110px 0 50px;
         text-transform: uppercase;
@@ -390,15 +404,15 @@ section {
         }
       }
       .right-step-4 {
-        padding-top: 55px;
+        padding-top: 35px;
         text-align: center;
         .box-step-4 {
-          margin: 15px 0;
+          margin: 10px 0;
         }
         h3 {
           color: #8dc63f;
           font-size: 18px;
-          margin: 25px 0;
+          margin: 10px 0 20px;
         }
         p {
           color: $white;
@@ -407,13 +421,13 @@ section {
         }
         .btn-invitacion {
           position: relative;
-          margin-top: 105px;
-          float: right;
+          margin-top: 60px;
           a {
             display: block;
           }
-          img {
+          img {            
             &.input {
+              display: none;
               top: -50px;
               left: -220px;
               position: absolute;
@@ -426,11 +440,12 @@ section {
       background-image: url('../images/bg-section-5.jpg');
       h1 {
         color: #1095da;
+        font-size: 225px;
         line-height: 250px;
       }
       h2 {
         color: $white;
-        font-size: 30px;
+        font-size: 22px;
         line-height: 40px;
         padding: 110px 0 50px;
         text-transform: uppercase;
@@ -446,13 +461,12 @@ section {
       .lists {
         margin-top: 20px;
         padding-left: 60px;
+        font-size: 15px;
+        color: $white;
         ul {
           &.list-1 {
             margin-bottom: 30px;
             li {
-              font-size: 18px;
-              color: $white;
-              margin-bottom: 20px;
               text-transform: uppercase;
               list-style-image: url('../images/step-1-list.png');
               list-style-position: outside;
@@ -462,7 +476,6 @@ section {
           &.list-3 {
             li {
               color: #8dc63f;
-              font-size: 18px;
               list-style: inside none disc;
               margin-bottom: 10px;
               span {
@@ -471,17 +484,16 @@ section {
             }
           }
         }
-      }
-      ol {
-        &.list-2 {
-          margin-bottom: 40px;
-          li {
-            color: #8dc63f;
-            font-size: 18px;
-            list-style: inside none decimal;
-            margin-bottom: 10px;
-            span {
-              color: $white;
+        ol {
+          &.list-2 {
+            margin-bottom: 25px;
+            li {
+              color: #8dc63f;
+              list-style: inside none decimal;
+              margin-bottom: 10px;
+              span {
+                color: $white;
+              }
             }
           }
         }
@@ -528,10 +540,11 @@ section {
       h1 {
         color: #1095da;
         line-height: 250px;
+        font-size: 225px;
       }
       h2 {
         color: $white;
-        font-size: 30px;
+        font-size: 22px;
         line-height: 40px;
         padding: 110px 0 50px;
         text-transform: uppercase;
@@ -578,27 +591,28 @@ section {
         }
       }
       .step-content {
-        margin-top: 75px;
+        margin-top: 25px;
         h3 {
           color: $white;
-          font-size: 20px;
+          font-size: 17px;
           font-weight: bold;
-          margin-bottom: 25px;
+          margin: 15px 0;
         }
         p {
           color: $white;
-          font-size: 20px;
+          font-size: 17px;
+          margin-bottom: 0;
         }
         ul {
           padding-left: 10px;
-          margin-bottom: 25px;
+          margin-top: 10px;
           li {
             color: #25aae1;
             list-style: outside none disc;
             padding-left: 10px;
             span {
               color: $white;
-              font-size: 18px;
+              font-size: 15px;
             }
           }
         }
@@ -612,7 +626,6 @@ section {
       }
       h2 {
         color: $white;
-        font-size: 30px;
         line-height: 40px;
         padding: 110px 0 50px;
         text-transform: uppercase;
@@ -621,12 +634,12 @@ section {
       }
       .left-step-6 {
         ul {
-          margin-top: 50px;
+          margin-top: 35px;
           padding-left: 50px;
           li {
-            font-size: 18px;
+            font-size: 15px;
             color: $white;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-transform: uppercase;
             list-style-image: url('../images/step-1-list.png');
             list-style-position: unset;
@@ -635,15 +648,16 @@ section {
         }
       }
       .right-step-6 {
-        margin-top: 80px;
+        margin-top: 40px;
         h3 {
           color: #8dc63f;
-          font-size: 18px;
-          margin-bottom: 20px;
+          font-size: 16px;
+          margin-bottom: 15px;
         }
         p {
           color: $white;
-          font-size: 18px;
+          font-size: 15px;
+          margin-bottom: 10px;
         }
         ol {
           margin-bottom: 20px;
@@ -654,11 +668,12 @@ section {
           }
         }
         .btn-semaforo {
-          margin: 80px auto 0;
+          margin: 65px auto 0;
           position: relative;
           width: 306px;
           img {
             &.input {
+              display: none;
               top: -40px;
               left: -180px;
               position: absolute;
@@ -675,7 +690,6 @@ section {
       }
       h2 {
         color: $white;
-        font-size: 30px;
         line-height: 40px;
         padding: 70px 0 90px;
         text-transform: uppercase;
@@ -685,7 +699,7 @@ section {
       .left-step-7 {
         ul {
           margin-top: 50px;
-          padding-left: 150px;
+          padding-left: 45px;
           li {
             font-size: 18px;
             color: $white;
@@ -726,7 +740,6 @@ section {
       }
       h2 {
         color: $white;
-        font-size: 30px;
         line-height: 40px;
         padding: 140px 0 60px;
         text-transform: uppercase;
@@ -735,10 +748,10 @@ section {
       }
       .left-step-8 {
         ul {
-          margin-top: 60px;
-          padding-left: 150px;
+          margin-top: 20px;
+          padding-left: 45px;
           li {
-            font-size: 18px;
+            font-size: 16px;
             color: $white;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -774,7 +787,7 @@ section {
           li {
             color: #8dc63f;
             list-style: inside none disc;
-            margin: 15px 0;
+            margin: 10px 0;
             span {
               color: $white;
             }
@@ -795,17 +808,82 @@ section {
   }
   h1 {
     font-family: 'Impact';
-    font-size: 250px;
+    font-size: 225px;
     text-transform: uppercase;
     margin: 0;
   }
+  h2 {
+    font-size: 20px;
+  }
   .next-step {
-    margin-top: 50px;
+    margin-top: 40px;
   }
   @media (min-width: 768px) {
+    min-height: 100%;
+    .section-content {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      padding: 0 15px;
+    }
     &.step {
-      &.step-5 .right-step-5 {
-        margin-top: 270px;
+      h1 {
+        font-size: 250px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      &.step-1 {
+        .step-content {
+          ul {
+            padding-left: 0;
+          }
+        }
+      }
+      &.step-2 {
+        h2 {
+          padding: 120px 0 40px;
+        }
+        .accordion-step-2 {
+          margin-top: 90px;
+        }
+      }
+      &.step-3 {
+        .right-step-3 {
+          .btn-matriz {
+            img {
+              display: block;
+            }
+          }
+        }
+      }
+      &.step-4 {
+        .right-step-4 {
+          .btn-invitacion {
+            float: right;
+            img {
+              &.input {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      &.step-5 {
+        .right-step-5 {
+          margin-top: 270px;
+        }
+      }
+      &.step-6 {
+        .right-step-6 {
+          .btn-semaforo {
+            img {
+              &.input {
+                display: block;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -828,6 +906,9 @@ aside {
   .wrap-logo {
     display: block;
     padding: 20px;
+  }
+  @media (min-width: 768px) {
+    position: fixed;
   }
 }
 
@@ -862,103 +943,103 @@ header {
       }
     }
     .header-content {
-        position: relative;
-        text-align: left;
-        padding: 120px 15px;
-        width: 100%;
-        .header-content-inner {
-          .header-desc {
-            margin-bottom: 20px;
-            h1 {
-              color: $green;
-              font-family: 'Impact';
-              font-size: 190px;
-              font-weight: 700;
-              line-height: 170px;
-              text-transform: uppercase;
-              margin: 0;
-            }
-            h2 {
-              color: $orange;
-              font-family: 'Impact';
-              font-size: 64px;
-              font-weight: 700;
-              letter-spacing: 4px;
-              line-height: 75px;
-              text-transform: uppercase;
-              margin: 0 0 0 25px;
-              padding: 10px 0;
-            }
-            p {
-              color: #664c4c;
-              font-size: 18px;
-              margin: 0;
-            }
-          }
-          .step-list {
-            padding: 0 0 0 50px;
+      position: relative;
+      text-align: left;
+      padding: 120px 15px;
+      width: 100%;
+      .header-content-inner {
+        .header-desc {
+          margin-bottom: 20px;
+          h1 {
+            color: $green;
+            font-family: 'Impact';
+            font-size: 190px;
+            font-weight: 700;
+            line-height: 170px;
+            text-transform: uppercase;
             margin: 0;
-            li {
-              display: block;
-              height: 100%;
-              margin-bottom: 25px;
+          }
+          h2 {
+            color: $orange;
+            font-family: 'Impact';
+            font-size: 64px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            line-height: 75px;
+            text-transform: uppercase;
+            margin: 0 0 0 25px;
+            padding: 10px 0;
+          }
+          p {
+            color: #664c4c;
+            font-size: 18px;
+            margin: 0;
+          }
+        }
+        .step-list {
+          padding: 0 0 0 50px;
+          margin: 0;
+          li {
+            display: block;
+            height: 100%;
+            margin-bottom: 25px;
+            position: relative;
+            a {
+              color: #664c4c;
+              background-color: $white;
+              display: inline-block;
               position: relative;
-              a {
-                color: #664c4c;
-                background-color: $white;
-                display: inline-block;
-                position: relative;
-                padding: 8px 20px;
-                text-transform: uppercase;
-                &:hover {
-                  text-decoration: none;
-                  background-color: #664c4c;
-                  color: $white;
-                }
-                &:after {
-                  @include transform(skew(45deg));
-                  @include transform-origin(top);
-                  background-color: $green;
-                  content: '';
-                  width: 100%;
-                  height: 12px;
-                  position:absolute;
-                  bottom:-12px;
-                  left:0;
-                }
-                &:before {
-                  @include transform(skewY(45deg));
-                  @include transform-origin(top);
-                  background-color: $green-shadow;
-                  content: '';
-                  width: 13px;
-                  height: 100%;
-                  position: absolute;
-                  top: 6px;
-                  right: -12px;
-                }
+              padding: 8px 20px;
+              text-transform: uppercase;
+              &:hover {
+                text-decoration: none;
+                background-color: #664c4c;
+                color: $white;
               }
-              span {
-                &.step-number {
-                  background-color: $green;
+              &:after {
+                @include transform(skew(45deg));
+                @include transform-origin(top);
+                background-color: $green;
+                content: '';
+                width: 100%;
+                height: 12px;
+                position:absolute;
+                bottom:-12px;
+                left:0;
+              }
+              &:before {
+                @include transform(skewY(45deg));
+                @include transform-origin(top);
+                background-color: $green-shadow;
+                content: '';
+                width: 13px;
+                height: 100%;
+                position: absolute;
+                top: 6px;
+                right: -12px;
+              }
+            }
+            span {
+              &.step-number {
+                background-color: $green;
+                position: absolute;
+                height: 100%;
+                width: 45px;
+                left: -45px;
+                span {
+                  color: $white;
+                  font-size: 20px;
                   position: absolute;
-                  height: 100%;
-                  width: 45px;
-                  left: -45px;
-                  span {
-                    color: $white;
-                    font-size: 20px;
-                    position: absolute;
-                    text-align: center;
-                    top: 50%;
-                    width: 100%;
-                    @include transform(translateY(-50%));
-                  }
+                  text-align: center;
+                  top: 50%;
+                  width: 100%;
+                  @include transform(translateY(-50%));
                 }
               }
             }
           }
         }
+      }
     }
     &.auto-height {
       min-height: auto;
@@ -1134,5 +1215,6 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: $theme-dark;
+  overflow-x: hidden;
+  webkit-tap-highlight-color: $theme-dark;
 }
