@@ -83,7 +83,7 @@ gulp.task('clean:dist', function() {
   return del.sync('dist');
 })
 
-gulp.task('default', ['clean:dist', 'browserSync', 'sass', 'styles', 'js', 'scripts', 'html', 'images', 'fonts'], function (){
+gulp.task('default', ['clean:dist', 'sass', 'styles', 'js', 'scripts', 'html', 'images', 'fonts', 'browserSync'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']);
   gulp.watch('app/js/**/*.js', ['js']);
   gulp.watch('app/**/*.html', ['html']);

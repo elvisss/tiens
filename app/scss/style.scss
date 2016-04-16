@@ -1365,6 +1365,14 @@ body {
       }
     }
   }
+  .carousel-video {
+    height: 450px;
+    display: none;
+    iframe {
+      height: 450px;
+      width: 100%;
+    }
+  }
 }
 
 .box-section {
