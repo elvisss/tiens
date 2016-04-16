@@ -1259,6 +1259,9 @@ body {
 }
 
 .album-gallery {
+  .popup-gallery {
+    padding: 0 25px;
+  }
   .title-gallery {
     padding: 0 20px;
     margin-bottom: 15px;
@@ -1277,8 +1280,9 @@ body {
   .box-gallery {
     background-color: #f6e08f;
     cursor: pointer;
-    margin: 7.5px 0;
+    margin: 5px;
     padding: 2px;
+    float: left;
     &:hover {
       background-color: #80bd26;
     }
@@ -1287,6 +1291,15 @@ body {
       background-size: cover;
       opacity: 1;
       height: 110px;
+      width: 110px;
+      display: block;
+    }
+    @media screen and (min-width: 768px) {
+      margin: 10px;
+      .cover-box {
+        height: 116px;
+        width: 116px;
+      }
     }
   }
   .gallery-download {
@@ -1327,6 +1340,31 @@ body {
       font-weight: bold;
     }
   }
+  .item-video {
+    cursor: pointer;
+    position: relative;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 0.75;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: center center;
+      background-image: url('../images/play-main-video.png');
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .box-section {
@@ -1352,6 +1390,10 @@ body {
         display: block;
         margin-bottom: 10px;
         position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 190px;
         &:after {
           content: "";
           position: absolute;

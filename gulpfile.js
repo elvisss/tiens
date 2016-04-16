@@ -90,6 +90,10 @@ gulp.task('default', ['clean:dist', 'browserSync', 'sass', 'styles', 'js', 'scri
   gulp.watch('app/**/*.+(png|jpg|jpeg|gif|svg)', ['images']);
 });
 
+gulp.task('dist', ['clean:dist', 'sass', 'styles', 'js', 'scripts', 'html', 'images', 'fonts'], function (){
+  console.log('App built')
+});
+
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
