@@ -116,7 +116,7 @@
                   <div class="item active">
                     <div class="item-video" style="background-image: url('images/slider2.jpg')"></div>
                     <div class="carousel-video">
-                      <iframe width="420" height="450" src="https://www.youtube.com/embed/i_cVJgIz_Cs" frameborder="0" allowfullscreen></iframe>
+                      <iframe id="playerID1" class="ytplayer" width="420" height="450" src="https://www.youtube.com/embed/i_cVJgIz_Cs?enablejsapi=1&theme=light&showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="title-caption">
                       <h2>Nemo Enim Ipsam Voluptatem Quia Voluptas Sit</h2>
@@ -125,7 +125,7 @@
                   <div class="item">
                     <div class="item-video" style="background-image: url('images/bg-section-1.jpg')"></div>
                     <div class="carousel-video">
-                      <iframe width="420" height="450" src="https://www.youtube.com/embed/9X1YLuv4-1c" frameborder="0" allowfullscreen></iframe>
+                      <iframe id="playerID2" class="ytplayer" width="420" height="450" src="https://www.youtube.com/embed/9X1YLuv4-1c?enablejsapi=1&theme=light&showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="title-caption">
                       <h2>Nemo Enim Ipsam Voluptatem Quia Voluptas Sit</h2>
@@ -134,7 +134,7 @@
                   <div class="item">
                     <div class="item-video" style="background-image: url('images/bg-section-2.jpg')"></div>
                     <div class="carousel-video">
-                      <iframe width="420" height="450" src="https://www.youtube.com/embed/bCkiH4FPqoA" frameborder="0" allowfullscreen></iframe>
+                      <iframe id="playerID3" class="ytplayer" width="420" height="450" src="https://www.youtube.com/embed/bCkiH4FPqoA?enablejsapi=1&theme=light&showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="title-caption">
                       <h2>Nemo Enim Ipsam Voluptatem Quia Voluptas Sit 2</h2>
@@ -593,6 +593,15 @@
           $('.item-video').show();
           $('.carousel-video').hide();
         }, 600);
+
+        // insert here to pause/stop all videos
+
+        // Pause all Videos Youtube
+
+        yt_players['playerID1'].pauseVideo();
+        yt_players['playerID2'].pauseVideo();
+        yt_players['playerID3'].pauseVideo();
+
       });
 
       $('.item-video').on('click', function(){
@@ -601,6 +610,26 @@
         $(this).siblings('.carousel-video').show();
       })
 
+    });
+
+
+    /**
+      Youtube code
+    */
+
+    var yt_int, yt_players={},
+        initYT = function() {
+            $(".ytplayer").each(function() {
+                yt_players[this.id] = new YT.Player(this.id);
+            });
+        };
+    $.getScript("//www.youtube.com/player_api", function() {
+        yt_int = setInterval(function(){
+            if(typeof YT === "object"){
+                initYT();
+                clearInterval(yt_int);
+            }
+        },500);
     });
 
   </script>
