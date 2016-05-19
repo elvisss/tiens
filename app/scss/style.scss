@@ -361,16 +361,19 @@ body {
 .cultura-organizacional {
   height: 225px;
   position: relative;
+  margin-bottom: 45px;
   .cover-cultura {
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: 1;
+    display: none;
   }
   @include gradient($white, $white-dark);
   .wrapper-cultura {
     height: 175px;
     padding-top: 70px;
+    text-align: center;
     h5 {
       margin: 0;
       font-size: 25px;
@@ -395,10 +398,6 @@ body {
       height: 50px;
       padding: 15px 0;
       text-align: center;
-      span {
-        border-left: 1px solid $green-light;
-        display: block;
-      }
     }
     .col-xs-4 {
       &:first-child {
@@ -421,7 +420,7 @@ body {
   .wrapper-growing {
     @include background-opacity($green, 0.9)
     bottom: 0;
-    height: 90px;
+    min-height: 90px;
     left: 0;
     position: absolute;
     right: 0;
@@ -429,7 +428,7 @@ body {
       h5 {
         color: $orange-lighter;
         font-size: 30px;
-        line-height: 90px;
+        line-height: 45px;
         margin: 0;
       }
     }
@@ -493,9 +492,13 @@ body {
   }
 }
 
+.lideres, .conocimientos {
+  margin: 10px 0;
+}
+
 .box-190 {
   background-color: $white;
-  height: 220px;
+  min-height: 220px;
   padding: 15px 15px 15px 30px;
   .wrap-190 {
     height: 190px;
@@ -535,7 +538,7 @@ body {
   h4 {
     color: $black;
     font-size: 36px;
-    margin: 0 0 50px;
+    margin: 0 0 25px;
     text-transform: uppercase;
   }
   .view-more-gallery {
@@ -630,6 +633,10 @@ body {
       }
     }
   }
+}
+
+.gallery-events, .gallery-videos {
+  margin: 20px 0;
 }
 
 .gallery-videos {
@@ -1445,6 +1452,32 @@ body {
     .box-sidebar {
       .body-sidebar {
         min-height: 600px;
+      }
+    }
+  }
+  .cultura-organizacional {
+    margin-bottom: 0;
+    .cover-cultura {
+      display: block;
+    }
+    .wrapper-cultura {
+      text-align: left;
+    }
+    .bot-cultura {
+      a {
+        span {
+          display: block;
+          border-left: 1px solid #7cce94;
+        }
+      }
+    }
+  }
+  .growing {
+    .wrapper-growing {
+      .grow-up {
+        h5 {
+          line-height: 90px;
+        }
       }
     }
   }
