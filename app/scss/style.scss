@@ -64,7 +64,7 @@ body {
   min-height: 400px;
   .wrapper-content {
     background-color: $white;
-    padding: 90px 0;
+    padding: 30px 0;
     &.bg-transparent {
       background-color: $transparent;
     }
@@ -243,7 +243,7 @@ body {
       float: left;
       font-size: 20px;
       line-height: 50px;
-      margin: 0 0 0 50px;
+      margin: 0 0 0 15px;
       text-transform: uppercase;
     }
     a {
@@ -251,7 +251,8 @@ body {
       float: right;
       font-size: 16px;
       line-height: 50px;
-      margin-right: 100px;
+      margin-right: 70px;
+      display: none;
     }
   }
   .body-new {
@@ -272,10 +273,10 @@ body {
         font-size: 23px;
         margin: 0 0 10px;
       }
-      p {
-        margin: 0;
+      .text-cut {
         color: $gray;
         font-size: 16px;
+        @include multiLineEllipsis($lineHeight: 1.4em, $lineCount: 3, $bgColor: white);
       }
     }
   }
@@ -486,8 +487,8 @@ body {
   }
   .owl-theme {
     .owl-nav {
-      bottom: 0;
-      left: -150px;
+      top: -50px;
+      right: 0;      
     }
   }
 }
@@ -515,10 +516,12 @@ body {
         font-size: 26px;
       }
     }
-    p {
+    .text-cut {
       color: $gris-lighter;
       font-size: 12px;
-      margin: 0;
+      @include multiLineEllipsis($lineHeight: 1em, $lineCount: 3, $bgColor: white);
+    }
+    p {
       &.date-conocimiento {
         margin-top: 5px;
       }
@@ -658,6 +661,10 @@ body {
       }
     }
   }
+}
+
+.sidebar {
+  margin-top: 50px;
 }
 
 .box-sidebar {
@@ -859,9 +866,11 @@ body {
           color: $black-light;
           font-size: 24px;
         }
-        p {
+        .text-cut {
           color: $black-lighter;
           font-size: 14px;
+          margin-bottom: 10px;
+          @include multiLineEllipsis($lineHeight: 1.4em, $lineCount: 3, $bgColor: white);
           &.post-meta {
             font-style: italic;
           }
@@ -1087,6 +1096,7 @@ body {
     font-weight: bold;
     padding-bottom: 15px;
     padding-left: 5px;
+    line-height: 30px;
   }
   &.md-title {
     font-size: 24px;
@@ -1287,9 +1297,10 @@ body {
   .box-gallery {
     background-color: #f6e08f;
     cursor: pointer;
-    margin: 5px;
+    margin: 10px 0;
     padding: 2px;
     float: left;
+    width: 100%;
     &:hover {
       background-color: #80bd26;
     }
@@ -1297,15 +1308,18 @@ body {
       background-position: center top;
       background-size: cover;
       opacity: 1;
-      height: 110px;
-      width: 110px;
+      height: 150px;
+      width: 100%;
       display: block;
     }
     @media screen and (min-width: 768px) {
-      margin: 10px;
       .cover-box {
-        height: 116px;
-        width: 116px;
+        height: 140px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      .cover-box {
+        height: 110px;
       }
     }
   }
@@ -1434,59 +1448,10 @@ body {
   }
 }
 
-// Responsive
-
-@media screen and (min-width: 768px) {
-  .navbar-main {
-    .navbar {
-      .navbar-collapse {
-        margin-left: 200px;
-      }
-    }
-  }
-  .new-main {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-  .sidebar-inverse {
-    .box-sidebar {
-      .body-sidebar {
-        min-height: 600px;
-      }
-    }
-  }
-  .cultura-organizacional {
-    margin-bottom: 0;
-    .cover-cultura {
-      display: block;
-    }
-    .wrapper-cultura {
-      text-align: left;
-    }
-    .bot-cultura {
-      a {
-        span {
-          display: block;
-          border-left: 1px solid #7cce94;
-        }
-      }
-    }
-  }
-  .growing {
-    .wrapper-growing {
-      .grow-up {
-        h5 {
-          line-height: 90px;
-        }
-      }
-    }
-  }
-}
-
 .box-eventos {
   .list-eventos {
     background-color: $white;
-    padding: 0 50px;
+    padding: 0 20px;
     .wrapper-list-eventos {
       padding: 35px 0 55px 0;
       .box-evento {
@@ -1511,10 +1476,11 @@ body {
           font-weight: bold;
           margin: 0 0 5px;
         }
-        p {
+        .text-cut {
           color: $black-lighter;
           font-size: 20px;
-          margin: 0;
+          @include multiLineEllipsis($lineHeight: 1.4em, $lineCount: 3, $bgColor: white);
+          margin-right: 0;
         }
         p.post-meta, h4 {
           color: $black-medium;
@@ -1556,48 +1522,43 @@ body {
     padding: 0;
 }
 
-.box-new article.new {
-    position: relative;
-    margin-top: 45px;
-}
-
-.box-new article.new:first-child {
-    margin-top: 0;
-}
-
-.box-new article.new .cover-new {
-    background-size: cover;
-    height: 230px;
-}
-
-.box-new article.new .new-content {
-  margin-top: 20px;
-  padding: 0 40px;
-}
-
-.box-new article.new .new-content h2 {
-    color: #1ba33a;
-    font-size: 22px;
-    line-height: 22px;
-    margin: 0 0 10px;
-    text-transform: uppercase;
-}
-
-.box-new article.new .new-content p {
-    color: #2b2b2b;
-    font-size: 16px;
-    margin: 0;
-}
-
-.box-new article.new .more-data {
-    margin-top: 30px;
-    padding-left: 40px;
-}
-
-.box-new article.new .more-data .post-meta {
-    color: #ffc423;
-    font-size: 14px;
-    margin: 0;
+.box-new {
+    article.new {
+        position: relative;
+        margin-top: 45px;
+        &:first-child {
+            margin-top: 0;
+        }
+        .cover-new {
+            background-size: cover;
+            height: 230px;
+        }
+        .new-content {
+            margin-top: 20px;
+            padding: 0 40px;
+            h2 {
+                color: #1ba33a;
+                font-size: 22px;
+                line-height: 22px;
+                margin: 0 0 10px;
+                text-transform: uppercase;
+            }
+            .text-cut {
+                color: #2b2b2b;
+                font-size: 16px;
+                @include multiLineEllipsis($lineHeight: 1.4em, $lineCount: 3, $bgColor: white);
+            }
+        }
+        .more-data {
+            margin-top: 30px;
+            padding-left: 40px;
+            .post-meta {
+                color: #ffc423;
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+    }
 }
 
 .box-new .btn.btn-green.btn-box {
@@ -1622,7 +1583,7 @@ body {
       font-size: 35px;
       height: 50px;
       margin: 0;
-      padding: 0 16px;
+      padding: 0 10px;
       &:hover {
         background-color: transparent;
         color: $orange-ligth;
@@ -1665,5 +1626,111 @@ body {
   }
   > .toast-info {
     background-image: url('../images/toast-info.png') !important;
+  }
+}
+
+
+// Responsive
+
+@media screen and (min-width: 992px) {
+  .cultura-organizacional {
+    .cover-cultura {
+      display: block;
+    }
+    margin-bottom: 0;
+    .wrapper-cultura {
+      text-align: left;
+    }
+    .bot-cultura {
+      a {
+        span {
+          display: block;
+          border-left: 1px solid #7cce94;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    .wrapper-content {
+      padding: 90px;
+    }
+  }
+  .navbar-main {
+    .navbar {
+      .navbar-collapse {
+        margin-left: 200px;
+      }
+    }
+  }
+  .new-main {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .cultura-organizacional {
+    margin-bottom: 0;
+  }
+  .sidebar-inverse {
+    .box-sidebar {
+      .body-sidebar {
+        min-height: 600px;
+      }
+    }
+  }
+  .growing {
+    .wrapper-growing {
+      .grow-up {
+        h5 {
+          line-height: 90px;
+        }
+      }
+    }
+  }
+  .last-news {
+    .top-news {
+      h3 {
+        margin-left: 50px;
+      }
+      a {
+        margin-right: 100px;
+      }
+    }
+  }
+  .owl-theme {
+    .owl-nav {
+      [class*='owl-'] {
+        padding: 0 16px;
+      }
+    }
+  }
+  .lideres {
+    .owl-theme {
+      .owl-nav {
+        bottom: 0;
+        left: -150px;
+        top: auto;
+        right: auto;
+      }
+    }
+  }
+  .box-eventos {
+    .list-eventos {
+      padding: 0 50px;
+    }
+  }
+  .sidebar {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .last-news {
+    .top-news {
+      a {
+        display: block;
+      }
+    }
   }
 }

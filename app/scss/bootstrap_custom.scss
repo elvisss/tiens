@@ -19,13 +19,18 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: transparent;
+}
+
 .pagination {
+  margin: 17.5px 0;
   > li {
     > a, > span {
       background-color: $green;
       border: 1px solid $green;
       color: $white;
-      margin: 0 2.5px;
+      margin: 2.5px;
       &:hover, &:focus {
         background-color: $orange;
         border: 1px solid $orange;
